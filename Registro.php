@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if (isset($_POST['submit'])) {
@@ -8,6 +9,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
+   
 
     // Verifica se o usuário ou e-mail já existem
     $sql = "SELECT * FROM registro WHERE usuario = ? OR email = ?";

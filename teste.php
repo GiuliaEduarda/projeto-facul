@@ -27,6 +27,8 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
             header('Location: index.php');
             exit();
         } else {
+            $row = $result->fetch_assoc();
+            $_SESSION['nome'] = $row['nome'];
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
             header('Location: minhaslistas.php');

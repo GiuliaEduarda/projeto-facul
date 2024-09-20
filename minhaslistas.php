@@ -57,7 +57,7 @@
                             <li class="nav-item d-none d-lg-block "><img src="img/Listou___1_-removebg-preview.png" width="60" alt=""></li>
                         </ul>
                         <ul class="navbar-nav  ">
-                            <li class="nav-item "><a class="btn btn-outline-light" href="minhaconta.html"><i class="fa-regular fa-circle-user fa-lg mr-2"></i>Minha conta</a></li>
+                            <li class="nav-item "><a class="btn btn-outline-light" href="minhaconta.php"><i class="fa-regular fa-circle-user fa-lg mr-2"></i>Minha conta</a></li>
                             <li class="nav-item"><a class="btn btn-outline-light" href="sair.php" >Sair</a></li>
             
                         </ul>
@@ -75,7 +75,7 @@
         
                   <div id="conta2" class=" mr-1 row btn btn-light ">
                     <ul class="navbar-nav  ">
-                        <li class="nav-item "><a class="btn btn-outline-light" href="minhaconta.html"><i class="fa-regular fa-circle-user fa-lg mr-2"></i>Minha conta</a></li>                 
+                        <li class="nav-item "><a class="btn btn-outline-light" href="minhaconta.php"><i class="fa-regular fa-circle-user fa-lg mr-2"></i>Minha conta</a></li>                 
         
                     </ul>
         

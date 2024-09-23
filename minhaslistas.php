@@ -1,4 +1,12 @@
 <?php
+
+    
+
+
+    
+
+
+
     session_start();
     if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true ) ){
 
@@ -8,18 +16,14 @@
         header('Location: index.php');
         
     } 
-        
+         $logado = $_SESSION['email'];
 
-        $logado = $_SESSION['email'];
+       
     
+   
 
 
-
-
-?>
-
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,7 +52,7 @@
                     <div class="mobile-hide collapse navbar-collapse justify-content-between">
                         <ul class="navbar-nav">
                             
-                            <li class="nav-item"><a class="nav-link" href="minhaslistas.php">Minhas listas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="">Minhas listas</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Contatos</a></li>
                             
         
@@ -84,7 +88,7 @@
                 
                 <div class="modal-body">
                     
-                    <div class="ho modal-line"><a class="nav-link" href="minhaslistas.php">Minhas listas</a></div>
+                    <div class="ho modal-line"><a class="nav-link" href="minhaslistas.html">Minhas listas</a></div>
                      <div class="ho modal-line"><a class="nav-link" href="">Contatos</a></div>
                      <div class="ho modal-line"><a class="nav-link" href="sair.php">Sair</a></div>
                   
@@ -117,46 +121,18 @@
                 </a>
                 <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
             </div>
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista de compras</h1></div>
-                </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
-            </div>
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista de compras</h1></div>
-                </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
-            </div>
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista de compras</h1></div>
-                </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
-            </div>
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista de compras</h1></div>
-                </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
-            </div>
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista de compras</h1></div>
-                </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
-            </div>
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista de compras</h1></div>
-                </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
-            </div>
+            
            
-           
+            <div>
+                <form action="" class="to-do-form">
+                    <input type="text" id="additionalInput" style="display: none;" name="description" id="description" class="form-control mr-3" placeholder="Write a new list name">
+                    <button type="button" id="submitBtn" class="form-button">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </form>
+            </div>
        </div>
-        <a class="a" href=""><i class="fa-solid fa-plus fa-3x"></i></a>
+       
     </main>
    
 
@@ -164,6 +140,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 
     
 </body>

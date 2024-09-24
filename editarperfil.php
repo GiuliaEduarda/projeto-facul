@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha conta</title>
     <link rel="shortcut icon" href="img/Listou!2.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/minhaconta.css">
+    <link rel="stylesheet" href="css/editarperfil.css">
      <!-- Bootstrap CSS  dentro do head-->
 
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -82,23 +83,33 @@
                 <div class="col-lg-6 maisuma m-auto text-center  d-flex flex-column justify-content-center align-items-center">
                    
                 <div class="usuario  p-5"><i class="fa-solid fa-user"></i></div>
-                    <form action="" class="input-group align-items-center justify-content-center">
+                    <form method="POST"  action="salvaredicao.php" class="input-group flex-column  align-items-center justify-content-center">
                         <div data-mdb-input-init class="form mb-4">
-                            <input type="text" name="updatenome" id="form2Example22" class="form-control form-control-lg" placeholder="Editar nome" />
+                            <input type="text" name="nome"  class="form-control form-control-lg"  placeholder="Editar nome" autocomplete="$_SESSION" />
                         </div>
                         <div data-mdb-input-init class="form mb-4">
-                            <input type="email" name="updateemail" id="form2Example22" class="form-control form-control-lg" placeholder="Editar email"  />
+                            <input type="email" name="email"  class="form-control form-control-lg"  placeholder="Editar email" autocomplete="$_SESSION"  />
                         </div>
                         <div data-mdb-input-init class="form mb-4">
-                            <input type="text" name="updateusuario" id="form2Example22" class="form-control form-control-lg" placeholder="Editar usuario" />
+                            <input type="text" name="usuario"  class="form-control form-control-lg"  placeholder="editar usuario" autocomplete="$_SESSION" />
                         </div>
-                        <div data-mdb-input-init class="form mb-4">
-                            <input type="password" name="updatesenha" id="form2Example22" class="form-control form-control-lg" placeholder="Editar Senha"  />
+                        <div data-mdb-input-init class="form mb-4  ">
+                            <input type="password" name="senha" class="form-control form-control-lg"  placeholder="editar senha" autocomplete="$_SESSION"  />
                         </div>
-                    </form>
-                    <div class="editar m-4">
-                        <button class="btn btn-danger btn-lg" href="editarperfil.php">Salvar</button>
+
+                        
+                       
+   
+                     
+                        
+                        <div class="text-center mb-4">
+                        <button class="btn btn-danger btn-lg" type="submit" value="atualizar">Salvar</button>
                     </div>
+                        
+                       
+                    
+                    </form>
+                    
                 </div>
             </div>
         </section>

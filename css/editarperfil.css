@@ -147,11 +147,19 @@ main{
 
 
 .col-lg-6{
-    width: 75%;
+    width: 900px !important;
     background-color: #74A60A;
     border-radius: 20px;
     box-shadow: 2px 2px 10px black;
 }
+.input-group{
+    
+}
+.form-control{
+   width: 300px !important;
+    
+}
+
 
 @media (max-width: 1100px) {
    
@@ -192,12 +200,15 @@ main{
      
   }
   .col-lg-6{
-    
-      background-color: #74A60A;
-      border-radius: 20px;
-      box-shadow: 2px 2px 10px black;
-  }
-  
+    width: 100% !important;
+    background-color: #74A60A;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black;
+}
+.form-control{
+    width: 40vh !important;
+     
+ }
  
  
  

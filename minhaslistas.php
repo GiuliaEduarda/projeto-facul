@@ -88,7 +88,7 @@
                 
                 <div class="modal-body">
                     
-                    <div class="ho modal-line"><a class="nav-link" href="minhaslistas.html">Minhas listas</a></div>
+                    <div class="ho modal-line"><a class="nav-link" href="minhaslistas.php">Minhas listas</a></div>
                      <div class="ho modal-line"><a class="nav-link" href="">Contatos</a></div>
                      <div class="ho modal-line"><a class="nav-link" href="sair.php">Sair</a></div>
                   
@@ -103,25 +103,15 @@
     <main id="main" class="d-flex justify-content-center align-items-center" >
        <div id="div" class="container-fluid d-flex justify-content-center">
         <div class=" nsei ">
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista de compras</h1></div>
+        <div id="fora" class="d-flex">
+                <a id="dent" class="w-75" href="">
+                    <div id="dentro" class=" text-truncate" ><h1 id="Nomedalista ">Lista de cosdfsdfsfsfddmpras grande grande grande</h1></div>
                 </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
+                <div  class="lixo"><a href=""><i class="fa-solid fa-pen-to-square fa-2x ml-2 mr-2"></i></a></div>
+                <div  class="lixo"><a href=""><i class="fa-solid fa-trash-can fa-2x mr-2"></i></a></div>
+               
             </div>
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista grande grande grande</h1></div>
-                </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
-            </div>
-            <div id="fora" class="d-flex">
-                <a id="dent" href="">
-                    <div id="dentro" class=" " ><h1 id="Nomedalista ">Lista de compras</h1></div>
-                </a>
-                <div id="lixo" class=""><a href=""><i class="fa-solid fa-trash-can fa-2x"></i></a></div>
-            </div>
-            
+           
            
             <div>
                 <form action="" class="to-do-form">

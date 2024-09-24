@@ -2,9 +2,9 @@
 session_start();
 
 // Verifique se o usuário está logado
-if (isset($_SESSION['usuario'])) {
+if (isset($_SESSION['email'])) {
     // Conexão com o banco de dados
-   include "config.php";
+    include "config.php";
 
     // Verifique a conexão
     if ($conexao->connect_error) {
@@ -12,23 +12,24 @@ if (isset($_SESSION['usuario'])) {
     }
 
     // Consulta SQL para obter as informações do usuário
-    $usuario = $_SESSION['usuario'];
-    $sql = "SELECT `nome`, `email`, `usuario`, `senha` FROM `registro` WHERE 1 = '$usuario'";
+    $email = $_SESSION['email'];
+    $sql = "SELECT `nome`, `email`, `usuario` FROM `registro` WHERE `email` = '$email'";
     $result = $conexao->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $_SESSION['nome'] = $row['nome'];
         $_SESSION['email'] = $row['email'];
-        $_SESSION['usuario_logado'] = $row['usuario']; 
+        $_SESSION['usuario'] = $row['usuario']; 
     } else {
         echo "Usuário não encontrado.";
     }
 
     $conexao->close();
 } else {
-    
+    echo "Usuário não está logado.";
 }
+
 ?>
 
 
@@ -111,8 +112,11 @@ if (isset($_SESSION['usuario'])) {
         
     </header>
     <main class="d-flex ">
+   
         <section class="container d-flex justify-content-center caixa">
+        
             <div class="row caixausuario   align-items-center ">
+          
                 <div class="col-lg-6 maisuma m-auto text-center  d-flex flex-column justify-content-center align-items-center">
                     <div class="usuario  p-5"><i class="fa-solid fa-user"></i></div>
                     <form action="" class="input-group align-items-center justify-content-center">
@@ -123,7 +127,7 @@ if (isset($_SESSION['usuario'])) {
                             <input type="email" name="email" id="form2Example22" class="form-control form-control-lg" placeholder="<?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'email'; ?>" readonly />
                         </div>
                         <div data-mdb-input-init class="form mb-4">
-                            <input type="text" name="usuario" id="form2Example22" class="form-control form-control-lg" placeholder="<?php  echo isset($_SESSION['usuario_logado']) ? $_SESSION['usuario_logado'] : 'usuario_logado'; ?>" readonly />
+                            <input type="text" name="usuario" id="form2Example22" class="form-control form-control-lg" placeholder="<?php  echo isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'usuario'; ?>" readonly />
                         </div>
                         <div data-mdb-input-init class="form mb-4">
                             <input type="password" name="senha" id="form2Example22" class="form-control form-control-lg" placeholder="*******" readonly />
@@ -133,10 +137,29 @@ if (isset($_SESSION['usuario'])) {
                         <a class="btn btn-danger btn-lg" href="editarperfil.php">Editar perfil</a>
                     </div>
                 </div>
+               
             </div>
+            
         </section>
+       
     </main>
-    
+     <div class="text-center d-flex justify-content-center mt-3 w-100">
+       
+     <?php
+                        if(isset($_SESSION['atualizado'])){
+
+                          ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                              <strong>Hey!</strong> <?php  echo $_SESSION['atualizado'] ?>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                          <?php
+                         
+                          unset($_SESSION['atualizado']);
+                                } ?>
+     </div>
     
 
     <!-- Bootstrap script - dentro do body-->

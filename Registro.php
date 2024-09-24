@@ -32,7 +32,9 @@ if (isset($_POST['submit'])) {
         $stmt->execute();
 
         // Redireciona para a página inicial
+        $_SESSION['criado'] = 'Perfil criado com sucesso!';
         header('Location: index.php');
+        
     }
 
     // Fecha a declaração e a conexão

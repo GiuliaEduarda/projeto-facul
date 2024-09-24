@@ -45,6 +45,21 @@ session_start();
                          
                           unset($_SESSION['login_erro']);
                                 } ?>
+                                
+            <?php
+                        if(isset($_SESSION['criado'])){
+
+                          ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                              <strong>Hey!</strong> <?php  echo $_SESSION['criado'] ?>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                          <?php
+                         
+                          unset($_SESSION['criado']);
+                                } ?>
               <div class="card rounded-3 text-black ">
                 <div class="row align-items-center ">
                   <div class="col-lg-6 ">

@@ -68,21 +68,22 @@ header{
     margin-bottom: 20px;
     height: 60px;
 }
-#lixo{
+.lixo{
     display: flex;
     align-items: center;
     margin: auto;
-}
-#lixo a{
     color: black;
 }
-#lixo a:hover{
+
+.lixo a{
+    color: black;
+}
+.lixo a:hover{
     color: red;
 }
-#dent{
-    
+#dent {
     background-color: #343A40;
-    width: 90%;
+    width: 100% ;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -92,15 +93,14 @@ header{
 #dent:hover{
     text-decoration: none;
 }
-#dent h1{
+#dentro{
+   
+}
+#dentro h1{
+    font-size: 1.5em;
     font-weight: 400;
   color: white;
-  width: 100%;
-  display: block;
-  white-space: nowrap; 
- overflow: hidden;
- text-overflow: ellipsis;
- padding-left: 15px;
+  text-overflow: ellipsis ;
 }
 
 
@@ -155,33 +155,33 @@ header{
 
 #fora{
     background-color: #74A60A;
-    width: 97%;
+    width: 80%;
     border-radius: 20px;
     text-align: center;
     margin-bottom: 20px;
     height: 60px;
 }
-#lixo{
+#lix{
     display: flex;
     align-items: center;
     margin: auto;
 }
-#lixo i{
-    font-size: 1.7em;
-}
-#lixo a{
+
+#lix a{
     color: black;
 }
-#lixo a:hover{
+#lix a:hover{
     color: red;
 }
-#dentro{
+
+#dent {
     background-color: #343A40;
-    width: 85%;
+    width: 80%;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-overflow: ellipsis;
 }
 #dentro h1{
     font-size: 1.5em;
@@ -189,6 +189,10 @@ header{
   color: white;
   text-overflow: ellipsis ;
 }
+
+
+
+
 
 
 .to-do-form{

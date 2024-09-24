@@ -68,17 +68,17 @@ header{
     margin-bottom: 20px;
     height: 60px;
 }
-.lixo{
+#lixo{
     display: flex;
     align-items: center;
     margin: auto;
     color: black;
 }
 
-.lixo a{
+#lixo a{
     color: black;
 }
-.lixo a:hover{
+#lixo a:hover{
     color: red;
 }
 #dent {
@@ -161,16 +161,16 @@ header{
     margin-bottom: 20px;
     height: 60px;
 }
-#lix{
+#lixo{
     display: flex;
     align-items: center;
     margin: auto;
 }
 
-#lix a{
+#lixo a{
     color: black;
 }
-#lix a:hover{
+#lixo a:hover{
     color: red;
 }
 

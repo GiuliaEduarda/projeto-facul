@@ -107,8 +107,8 @@
                 <a id="dent" class="w-75" href="">
                     <div id="dentro" class=" text-truncate" ><h1 id="Nomedalista ">Lista de cosdfsdfsfsfddmpras grande grande grande</h1></div>
                 </a>
-                <div  class="lixo"><a href=""><i class="fa-solid fa-pen-to-square fa-2x ml-2 mr-2"></i></a></div>
-                <div  class="lixo"><a href=""><i class="fa-solid fa-trash-can fa-2x mr-2"></i></a></div>
+                <div  id="lixo"><a href=""><i class="fa-solid fa-pen-to-square fa-2x ml-2 mr-2"></i></a></div>
+                <div  id="lixo"><a href=""><i class="fa-solid fa-trash-can fa-2x mr-2"></i></a></div>
                
             </div>
            

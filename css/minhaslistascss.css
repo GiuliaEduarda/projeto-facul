@@ -61,7 +61,7 @@ header{
 }
 #fora{
     background-color: #74A60A;
-    width: 100%;
+    width: 99%;
     border-radius: 20px;
     text-align: center;
    
@@ -94,7 +94,7 @@ header{
     text-decoration: none;
 }
 #dentro{
-   
+    text-overflow: ellipsis;
 }
 #dentro h1{
     font-size: 1.5em;
@@ -155,7 +155,7 @@ header{
 
 #fora{
     background-color: #74A60A;
-    width: 80%;
+    width: 99%;
     border-radius: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -175,8 +175,8 @@ header{
 }
 
 #dent {
+   
     background-color: #343A40;
-    width: 80%;
     border-radius: 20px;
     display: flex;
     justify-content: center;

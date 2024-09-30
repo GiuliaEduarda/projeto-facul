@@ -1,36 +1,11 @@
-<?php
-
-    
-
-
-    
-
-
-
-    session_start();
-    if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true ) ){
-
-        unset($_SESSION['email']);
-        unset($_SESSION['senha']);
-        
-        header('Location: index.php');
-        
-    } 
-         $logado = $_SESSION['email'];
-
-       
-    
-   
-
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minhas listas</title>
     <link rel="shortcut icon" href="img/Listou!2.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/minhaslistascss.css">
+    <link rel="stylesheet" href="css/produtos.css">
      <!-- Bootstrap CSS  dentro do head-->
 
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -100,41 +75,10 @@
           </div>
         
     </header>
-    <main id="main" class="d-flex justify-content-center align-items-center" >
-       <div id="div" class="container-fluid d-flex justify-content-center">
-        <div class=" nsei ">
-        <div id="fora" class="d-flex w-100">
-                <a id="dent" class="w-75 pl-2" href="produtos.html">
-                    <div id="dentro" class=" text-truncate" ><h1 id="Nomedalista ">Lista de cosdfsdfsfsfddmpras grande grande grande</h1></div>
-                </a>
-                <div  id="lixo"><a href=""><i class="fa-solid fa-pen-to-square fa-2x ml-2 mr-2"></i></a></div>
-                <div  id="lixo"><a href=""><i class="fa-solid fa-trash-can fa-2x mr-2"></i></a></div>
-               
-            </div>
-            <div id="fora" class="d-flex w-100">
-                <a id="dent" class="w-75 pl-2" href="produtos.html">
-                    <div id="dentro" class=" text-truncate" ><h1 id="Nomedalista ">Lista de cosdfsdfsfsfddmpras grande grande grande</h1></div>
-                </a>
-                <div  id="lixo"><a href=""><i class="fa-solid fa-pen-to-square fa-2x ml-2 mr-2"></i></a></div>
-                <div  id="lixo"><a href=""><i class="fa-solid fa-trash-can fa-2x mr-2"></i></a></div>
-               
-            </div>
+   
            
            
            
-           
-           
-            <div>
-                <form action="" class="to-do-form">
-                    <input type="text" id="additionalInput" style="display: none;" name="description" id="description" class="form-control mr-3" placeholder="Write a new list name">
-                    <button type="button" id="submitBtn" class="form-button">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                </form>
-            </div>
-       </div>
-       
-    </main>
    
 
     

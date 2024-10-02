@@ -14,3 +14,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
         submitBtn.type = 'submit'; // Muda o tipo para submit quando o usuário clicar para submeter
     }
 });
+
+
+
+

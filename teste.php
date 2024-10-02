@@ -23,6 +23,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
         if(mysqli_num_rows($result) < 1){
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
+            
             $_SESSION['login_erro'] = 'Email ou senha incorretos';
             header('Location: index.php');
             exit();
@@ -31,6 +32,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
             $_SESSION['nome'] = $row['nome'];
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
+            $_SESSION['user_id'] = $row['id'];
             header('Location: minhaslistas.php');
             exit();
         }

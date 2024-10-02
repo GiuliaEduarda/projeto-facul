@@ -1,26 +1,22 @@
 <?php
 
-    
-
-
-    
-
-
 
     session_start();
     if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true ) ){
-
+       
+    
         unset($_SESSION['email']);
         unset($_SESSION['senha']);
         
         header('Location: index.php');
         
     } 
+      
          $logado = $_SESSION['email'];
+        
+         include 'config.php';
 
-       
-    
-   
+        
 
 
 ?><!DOCTYPE html>
@@ -103,36 +99,36 @@
     <main id="main" class="d-flex justify-content-center align-items-center" >
        <div id="div" class="container-fluid d-flex justify-content-center">
         <div class=" nsei ">
-        <div id="fora" class="d-flex w-100">
-                <a id="dent" class="w-75 pl-2" href="produtos.html">
-                    <div id="dentro" class=" text-truncate" ><h1 id="Nomedalista ">Lista de cosdfsdfsfsfddmpras grande grande grande</h1></div>
-                </a>
-                <div  id="lixo"><a href=""><i class="fa-solid fa-pen-to-square fa-2x ml-2 mr-2"></i></a></div>
-                <div  id="lixo"><a href=""><i class="fa-solid fa-trash-can fa-2x mr-2"></i></a></div>
-               
-            </div>
-            <div id="fora" class="d-flex w-100">
-                <a id="dent" class="w-75 pl-2" href="produtos.html">
-                    <div id="dentro" class=" text-truncate" ><h1 id="Nomedalista ">Lista de cosdfsdfsfsfddmpras grande grande grande</h1></div>
-                </a>
-                <div  id="lixo"><a href=""><i class="fa-solid fa-pen-to-square fa-2x ml-2 mr-2"></i></a></div>
-                <div  id="lixo"><a href=""><i class="fa-solid fa-trash-can fa-2x mr-2"></i></a></div>
-               
-            </div>
-           
-           
-           
-           
-           
-            <div>
-                <form action="" class="to-do-form">
-                    <input type="text" id="additionalInput" style="display: none;" name="description" id="description" class="form-control mr-3" placeholder="Write a new list name">
-                    <button type="button" id="submitBtn" class="form-button">
-                        <i class="fa-solid fa-plus"></i>
+        <?php
+       
+
+       $sql = "SELECT id_listas, nome_lista FROM listas WHERE email = '$logado'";
+        $result = $conexao->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<div id='fora' class='d-flex w-100'>";
+                echo "<a id='dent' class='w-75 pl-2' href='produtos.php?id=" . $row["id_listas"] . "'>";
+                echo "<div id='dentro' class='text-truncate'><h1 id='Nomedalista'>" . $row["nome_lista"] . "</h1></div>";
+                echo "</a>";
+                echo "<div id='lixo'><a id='edit' href='editar.php?id=" . $row["id_listas"] . "'><i class='fa-solid fa-pen-to-square fa-2x ml-2 mr-2'></i></a></div>";
+                echo "<div id='lixo'><a href='deletar.php?id=" . $row["id_listas"] . "'><i class='fa-solid fa-trash-can fa-2x mr-2'></i></a></div>";
+                echo "</div>";
+            }
+        } else {
+            echo "0 resultados";
+        }
+
+        $conexao->close();
+        ?>
+ 
+<form action="criar.php" method="post" class="to-do-form">
+                    <input type="text" name="nome_lista" id="additionalInput" class="form-control mr-3" placeholder="Escreva o nome da nova lista">
+                    <button  class="form-button" id="submitBtn">
+                    <i class="fa-solid fa-plus"></i>
                     </button>
-                </form>
-            </div>
-       </div>
+            </form>
+
        
     </main>
    
@@ -142,6 +138,62 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+   <script defer>
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.fa-pen-to-square').forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            let container = this.closest('#fora');
+            if (container) {
+                let h1 = container.querySelector('#Nomedalista');
+                if (h1) {
+                    let currentText = h1.textContent;
+                    let input = document.createElement('input');
+                    input.type = 'text';
+                    input.value = currentText;
+                    h1.replaceWith(input);
+                    input.focus();
+                    input.style.backgroundColor = 'transparent';
+                    input.style.color = 'white';
+
+                    input.addEventListener('blur', function() {
+                        let newText = input.value;
+                        let h1 = document.createElement('h1');
+                        h1.id = 'Nomedalista';
+                        h1.textContent = newText;
+                        input.replaceWith(h1);
+
+                        // Enviar a atualização para o servidor
+                        let id_lista = container.querySelector('a').href.split('id=')[1];
+                        fetch('editar.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded'
+                            },
+                            body: `id_listas=${id_lista}&nome_lista=${newText}`
+                        }).then(response => response.text()).then(data => {
+                            console.log(data);
+                        }).catch(error => {
+                            console.error('Erro:', error);
+                        });
+                    });
+                } else {
+                    console.error('Elemento #Nomedalista não encontrado');
+                }
+            } else {
+                console.error('Elemento #fora não encontrado');
+            }
+        });
+    });
+});
+
+
+
+
+
+   </script>
+
 
     
 </body>

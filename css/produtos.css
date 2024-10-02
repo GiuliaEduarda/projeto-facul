@@ -87,22 +87,23 @@ main{
     
     position: fixed;
    top: 87vh;
-   left: 33vw;
+   left: 31vw;
    
 }
 
 
 #nome{
     height: 80px;
-    border-radius: 50px; 
+    border-radius: 20px; 
     font-size: 2.5em;
     
  }
  #botaoadicionar{
      text-align: center;
-     border-radius: 50px; 
+     border-radius: 20px; 
      background-color: orange;
      font-size: 2.5em;
+     margin-left: 20px;
  }
 
 
@@ -176,7 +177,7 @@ tr{
         
         position: fixed;
        top: 87vh;
-       left: 25vw;
+       left: 23vw;
        
     }
 }
@@ -244,21 +245,23 @@ tr{
 .add{
     position: fixed;
     top: 93vh ;
-   left: 3.4vw;
+   left: 3vw;
+   justify-content: center;
    width: 100vw;
    
 }
 #nome{
-    height: 50px;
-    border-radius: 30px; 
+    height: 50%;
+    border-radius: 20px; 
     font-size: 1.3em;
     
  }
  #botaoadicionar{
-    height: 50px;
+    height: 50%;
      text-align: center;
-     border-radius: 30px; 
+     border-radius: 20px; 
      background-color: orange;
      font-size: 1.3em;
+     margin-left: 0px;
  }
 }

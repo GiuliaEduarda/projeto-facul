@@ -201,7 +201,7 @@ ob_start();
         ?>
         
     <div class="add text-center ">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class=" justify-content-center">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class=" ">
             <div class="form-group mr-2 row">
                 
                 <input type="text" id="nome" name="nome" class="form-control form-control-lg  col" required placeholder="Digite o nome do item...">

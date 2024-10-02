@@ -116,7 +116,7 @@
                 echo "</div>";
             }
         } else {
-            echo "0 resultados";
+            echo "Você ainda não criou nenhuma lista!";
         }
 
         $conexao->close();

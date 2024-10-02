@@ -5,6 +5,7 @@
 }
 body{
     background-color: #644989 !important; 
+    height: 210%;
 }
 .nav-item a{
     font-size: 1.5em;
@@ -56,6 +57,131 @@ header{
     width: 50%;
 }
 
+.lista {
+    background-color: #343A40;
+   padding: 20px;
+    width: 60vw; /* Defina a largura desejada */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto dentro da div */
+}
+.lista h1{
+    font-size: 4em;
+}
+main{
+    margin: auto;
+}
+
+.container h1 {
+    text-align: center;
+}
+.nsei{
+    width: 50%;
+}
+
+
+
+
+.add{
+    width: 100%;
+    display: flex;
+    
+    position: fixed;
+   top: 87vh;
+   left: 33vw;
+   
+}
+
+
+#nome{
+    height: 80px;
+    border-radius: 50px; 
+    font-size: 2.5em;
+    
+ }
+ #botaoadicionar{
+     text-align: center;
+     border-radius: 50px; 
+     background-color: orange;
+     font-size: 2.5em;
+ }
+
+
+
+.item-nome{
+    white-space: nowrap; /* Impede a quebra de linha */
+    overflow: hidden; /* Esconde o texto que ultrapassa a largura da div */
+    text-overflow: ellipsis;
+    font-size: 2em;
+    
+}
+.btn-check{
+   width: 50px;
+   height: 50px;
+   background-color: grey;
+   
+}
+.btn-check:checked{
+    background-color: #74A60A;
+}
+.btn-check:checked::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #74A60A;
+  }
+#che{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+tr{
+   
+    display: flex;
+    justify-content:space-between ;
+}
+
+
+.lixo a i:hover{
+    color: red;
+}
+
+.lixo a i{
+    color: black;
+    font-size: 3em;
+    
+}
+.lixo a{
+    margin-right: 20px;
+}
+
+.final{
+    
+    display: flex;
+    width: 100% ;
+}
+
+.tra{
+   margin-bottom: 20%;
+}
+
+
+@media (min-width:1101px) and (max-width: 1919px){
+    .add{
+        width: 100%;
+        display: flex;
+        
+        position: fixed;
+       top: 87vh;
+       left: 25vw;
+       
+    }
+}
+
+
 @media (max-width: 1100px) {
    
 .navimg{
@@ -69,5 +195,70 @@ header{
      width: 100%;
     
  }
+ .lista {
+    
+    background-color: #343A40;
+   padding: 20px;
+    width: 100%; /* Defina a largura desejada */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto dentro da div */
+}
 
+ 
+  .nome-do-produto {
+    
+}
+
+.lixo a i{
+    color: black;
+    font-size: 2.5em;
+    
+}
+.btn-check{
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    
+ }
+ .btn-check:checked{
+     background-color: #74A60A;
+ }
+ .btn-check:checked::before {
+     content: '';
+     display: block;
+     width: 100%;
+     height: 100%;
+     background-color: #74A60A;
+   }
+
+
+
+.item-nome{
+    width: 90%;
+    font-size: 1.5em;
+}
+
+
+
+   
+.add{
+    position: fixed;
+    top: 93vh ;
+   left: 3.4vw;
+   width: 100vw;
+   
+}
+#nome{
+    height: 50px;
+    border-radius: 30px; 
+    font-size: 1.3em;
+    
+ }
+ #botaoadicionar{
+    height: 50px;
+     text-align: center;
+     border-radius: 30px; 
+     background-color: orange;
+     font-size: 1.3em;
+ }
 }

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    font-family: "Inter", sans-serif;
+}
+.back{ background-color: #644989;
+width: 100vw;
+height: 100vh;
+}
+#sualista{
+    color: #7e42d1;
+    font-size: 2em;
+    font-weight: 500;
+}
+#buttonlogin{
+    width: 100%;
+    background-color: #638C08;
+}
+#button{
+    color: black;
+    background-color: #638C08;
+}
+#com{
+    background-color: #E3FFDE;
+    border-radius: 0px 5px 5px 0px;
+  
+}
+
+@media (max-width: 1100px) {
+   
+    #imgflu{
+        width: 142px;
+    }
+    #com{
+        background-color: transparent;
+        border-radius: 0px 5px 5px 0px;
+      
+    }
+    .col-lg-6 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .col-xl-10{
+        border-radius: 20%
+    }
+   
+}

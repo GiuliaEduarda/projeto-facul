@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    font-family: "Inter", sans-serif;
+    
+}
+body{
+    background-color: #644989 !important; 
+}
+.nav-item a{
+    font-size: 1.5em;
+    color: black;
+    margin-right: 50px;
+}
+header{
+    box-shadow: 2px 2px 10px black;
+    background-color: white;
+}
+
+.modal{
+    width: 330px;
+    height: 200vh;
+    
+   
+}
+.modal-dialog{
+    
+
+}
+.modal-content{
+    width: 325px;
+    
+   
+    
+}
+.modal-line a{
+    color: black;
+    font-size: 1.5em;
+}
+.modal-header{
+    height: 90px;
+    padding: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 30px 30px 0px 0px;
+    
+}
+.modal-body{
+    
+    border-radius: 0px 0px 30px 30px;
+}
+
+.nsei{
+    width: 50%;
+}
+
+#div{
+    margin-top: 50px;
+}
+#fora{
+    background-color: #74A60A;
+    width: 99%;
+    border-radius: 20px;
+    text-align: center;
+   
+    margin-bottom: 20px;
+    height: 60px;
+}
+#lixo{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    color: black;
+}
+
+#lixo a{
+    color: black;
+}
+#lixo a:hover{
+    color: red;
+}
+#dent {
+    background-color: #343A40;
+    width: 100% ;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
+}
+#dent:hover{
+    text-decoration: none;
+}
+#dentro{
+    text-overflow: ellipsis;
+}
+#dentro h1{
+    font-size: 1.5em;
+    font-weight: 400;
+  color: white;
+  text-overflow: ellipsis ;
+}
+
+
+
+
+.h1{
+
+}
+
+.to-do-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 89vh;
+    left: 55vw;
+    width: 50vw;
+   
+    margin: auto;
+}
+.to-do-form input{
+    width: 50%;
+    display: none;
+}
+.form-button{
+    background-color: #28A745;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    border-radius: 50%;
+}
+
+#Nomedalista{
+    background-color: transparent;
+}
+
+
+
+@media (max-width: 1100px) {
+   
+   .navimg{
+    display: none;
+   }
+
+
+#div{
+   
+   
+}
+   .nsei{
+    width: 100%;
+   
+}
+
+#fora{
+    background-color: #74A60A;
+    width: 99%;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 60px;
+}
+#lixo{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+#lixo a{
+    color: black;
+}
+#lixo a:hover{
+    color: red;
+}
+
+#dent {
+   
+    background-color: #343A40;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
+}
+#dentro h1{
+    font-size: 1.5em;
+    font-weight: 400;
+  color: white;
+  text-overflow: ellipsis ;
+}
+
+
+
+
+
+
+.to-do-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 89vh;
+    left: 0vw;
+    width: 100vw;
+   
+    margin: auto;
+}
+.to-do-form input{
+    width: 60%;
+    
+    
+    transition: opacity 0.5s ease;
+}
+
+.form-button{
+    background-color: #28A745;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    border-radius: 50%;
+}
+
+
+
+}
